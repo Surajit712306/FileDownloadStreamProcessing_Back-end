@@ -104,7 +104,7 @@ namespace FileDownloadStreamProcessing.Controllers
         public override long Position
         {
             get => _position - _start;
-            set => Seek(value + _start, SeekOrigin.Begin);
+            set => Seek(value, SeekOrigin.Begin);
         }
 
         public override void Flush() => _baseStream.Flush();
